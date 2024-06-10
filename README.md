@@ -5,8 +5,6 @@ You will implement the well known game *Tic-Tac-Toe* and apply adversarial searc
 
 To make your life easier, there are some classes and interfaces already defined for you. Namely, a `Game` class, a `GameState` tuple as well as some minor helpers. We will go over them in detail now.
 
-## Task 1.1
-
 
 
 ```python
