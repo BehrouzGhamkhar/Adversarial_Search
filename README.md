@@ -1,69 +1,3 @@
-# Artificial Intelligence for Robotics 07
-
-## General Information:
-Please do not add or delete any cells. Answers belong into the corresponding cells (below the question). If a function is given (either as a signature or a full function), you should not change the name, arguments or return value of the function.
-
-If you encounter empty cells underneath the answer that can not be edited, please ignore them, they are for testing purposes.
-
-When editing an assignment there can be the case that there are variables in the kernel. To make sure your assignment works, please restart the kernel and run all cells before submitting (e.g. via Kernel -> Restart & Run All).
-
-Code cells where you are supposed to give your answer often include the line `raise NotImplementedError`. This makes it easier to automatically grade answers. If you edit the cell please outcomment or delete this line.
-
-## Submission:
-Please submit your notebook via the web interface (in the main view -> Assignments -> Submit). The assignments are **due on Monday at 20:00**.
-
-## Group Work:
-Please enter your UID (your username here) and those of your group partners into the next cell. We apply plagiarism checking, so do not submit others solutions! If an assignment has a copied solution, the task will be graded with 0 points for all people with the same solution.
-
-## Questions about the Assignment:
-If you have questions about the assignment please post them in the LEA forum before the deadline. Don't wait until the last day to post questions!
-
-### Please add the usernames of all your team members in the manner member1, member2 in next cell (example given below)
-
-member1 = 'example'
-
-member2 = 'example2'
-
-#### If you are not working in a group, then please add member2 as none2s
-
-
-```python
-# YOUR CODE HERE
-raise NotImplementedError()
-```
-
-
-    ---------------------------------------------------------------------------
-
-    NotImplementedError                       Traceback (most recent call last)
-
-    Cell In[1], line 2
-          1 # YOUR CODE HERE
-    ----> 2 raise NotImplementedError()
-    
-
-    NotImplementedError: 
-
-
-
-```python
-# Execute this cell to make sure you correctly filled in the usernames of the team members
-
-def group_name_test():
-    for member_id in [member1, member2]:
-        assert isinstance(member_id, str), "Please give your member id as a string."
-        assert len(member_id) > 0, "You need to fill in the member id for both members"
-        assert member_id.endswith("2s"), "The member id should end with 2s (Your JupyterHub username)"
-
-group_name_test() 
-print("All tests passed!")
-```
-
-# Task 1
-
-**[100 Point(s)]**
-
-
 # Adversarial Search
 
 In this assignment you will bring to practice the algorithms that were introduced to you during the lectures about adversarial search.  
@@ -73,7 +7,6 @@ To make your life easier, there are some classes and interfaces already defined 
 
 ## Task 1.1
 
-**[20 Point(s)]**
 
 
 ```python
@@ -123,7 +56,7 @@ Now let's get into details of all the methods in our `Game` class. You have to i
 
 * `play_game` : This function is the one that will actually be used to play the game. You pass an instance of the game you want to play and the instances of the players you want in this game. Use it to play AI vs AI, AI vs human, or even human vs human matches!
 
-## `TicTacToe` Class [20 Points]
+## `TicTacToe` Class 
 
 Now that you know about how to use the `Game` class, the first task is to implement the class `TicTacToe`, which has been inherited from the class `Game`.
 
@@ -313,9 +246,7 @@ class TicTacToe(Game):
 
 ```
 
-## Task 1.2
 
-**[25 Point(s)]**
 
 ## Players to play games
 
@@ -371,7 +302,7 @@ def random_player(game: Game, state: GameState):
     return random.choice(game.actions(state))
 ```
 
-### Implementing the MiniMax Player [25 Points]
+### Implementing the MiniMax Player 
 
 Lets start by implementing the `MiniMax` player. Below you will find a class template that defines three methods: `max_value`, `min_value` and `search`. Additionally a `__call__` function is implemented, which is used as an entry point when a player instance is passed to the `Game.play_game()` function in order to play the game.
 > You do **not** have to change the `__call__` function!
@@ -478,11 +409,8 @@ class MiniMax(Player):
 
 ```
 
-## Task 1.3
 
-**[30 Point(s)]**
-
-### Implementing the AlphaBeta Player [30 Points]
+### Implementing the AlphaBeta Player 
 
 With the plain version of minimax implemented, now implement the enhanced version of the algorithm by using **alpha-beta-search**.
 
@@ -621,11 +549,8 @@ class AlphaBeta(Player):
 
 ```
 
-## Task 1.4
 
-**[3 Point(s)]**
-
-## Playing a Game [3 Points]
+## Playing a Game 
 
 With all the players in place we can now play some games. Either by letting different algorithmic players play against each other, or by playing ourself.
 
@@ -698,11 +623,8 @@ print_winner(result_game_2, player2, player3)
     
     
 
-## Task 1.5
 
-**[7 Point(s)]**
-
-## Evaluating MiniMax and AlphaBeta A) [7 Points]
+## Evaluating MiniMax and AlphaBeta A) 
 
 Now lets compare the two optimal agents against one another. For this please let each agent play against another instance of itself $10$ times and record both the terminal states and the time taken for the entire game in `terminal_states` and `time_taken` respectively.
 
@@ -763,11 +685,8 @@ print("Time Taken:", time_taken)
 
 ```
 
-## Task 1.6
 
-**[15 Point(s)]**
-
-## Evaluating MiniMax and AlphaBeta B) [15 Points]
+## Evaluating MiniMax and AlphaBeta B) 
 
 Try to explain the above results. What are the takeways? Was this results to be expected? Why?
 
